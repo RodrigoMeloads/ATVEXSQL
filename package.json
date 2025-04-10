@@ -1,0 +1,37 @@
+{
+  "name": "atvexsql",
+  "version": "1.0.0",
+  "description": "Repositório criado para atividade do Desafio Express + MySQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RodrigoMeloads/ATVEXSQL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RodrigoMeloads/ATVEXSQL/issues"
+  },
+  "homepage": "https://github.com/RodrigoMeloads/ATVEXSQL#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "debug": "^4.4.0",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "http-errors": "^2.0.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.24.0",
+    "eslint-config-google": "^0.14.0",
+    "nodemon": "^3.1.9"
+  }
+}

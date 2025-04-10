@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+const app = require('../app');
+const http = require('http');
+
+const port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+const server = http.createServer(app);
+
+server.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+});
+server.on('error', onError);
+
+function normalizePort(val) {
+    const port = parseInt(val, 10);
+    return isNaN(port) ? val : (port >= 0 ? port : false);
+}
+
+function onError(error) {
+    if (error.syscall !== 'listen') throw error;
+
+    const bind = typeof port === 'string' ? 'Pipe ' + port : 'Port ' + port;
+
+    switch (error.code) {
+        case 'EACCES':
+            console.error(bind + ' requer privilégios elevados');
+            process.exit(1);
+        case 'EADDRINUSE':
+            console.error(bind + ' já está em uso');
+            process.exit(1);
+        default:
+            throw error;
+    }
+}
